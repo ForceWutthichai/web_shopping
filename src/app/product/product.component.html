@@ -1,0 +1,32 @@
+<body>
+  <div class="topbar">
+    <div class="logo">Product</div>
+    <nav>
+      <ul class="nz-menu" nz-menu nzMode="inline">
+        <li nz-menu-item (click)="welcomeHome()"><a href="javascript:void(0)">Home</a></li>
+        <li nz-menu-item (click)="onAdd()"><a href="javascript:void(0)">Add Product</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="card-container">
+    <div *ngFor="let item of _productService.products">
+      <div class="card">
+        <img src="{{item.image}}" alt="Product Image" class="card-image">
+        <div class="card-content">
+          <h2 class="card-title">{{item.name}}</h2>
+          <p class="card-description">{{item.details}}</p>
+          <p class="card-price">{{item.price}}</p>
+          <p class="card-stock">{{item.stock}}</p>
+          <div class="card-buttons">
+            <button class="view-button">View</button>
+            <button class="buy-button">Buy</button>
+          </div>
+          <div class="card-buttons">
+            <button nz-button nzType="primary" nzDanger class="delete-button" (click)="onDelete(item.id)">Delete</button>
+            <button nz-button nzType="primary" class="custom-yellow-orange-button" (click)="onDelete(item.id)">Edit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

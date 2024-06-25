@@ -1,0 +1,36 @@
+<div class="background" >
+  <div class="centered-box">
+    <div nz-row>
+      <div nz-col nzSpan="24" style="font-family: cursive; font-size: 2.5rem; color: white;">
+        <h1>LOGIN</h1>
+      </div>
+      <div nz-col nzSpan="24" class="login1" >
+        <form nz-form [formGroup]="validateForm" class="login-form" (ngSubmit)="submitForm()">
+          <nz-form-item>
+            <nz-form-control nzErrorTip="Please input your username!">
+              <nz-input-group nzPrefixIcon="user">
+                <input type="text" nz-input formControlName="userName" placeholder="Username" />
+              </nz-input-group>
+            </nz-form-control>
+          </nz-form-item>
+
+          <nz-form-item>
+            <nz-form-control nzErrorTip="Please input your Password!">
+              <nz-input-group nzPrefixIcon="lock">
+                <input type="password" nz-input formControlName="password" placeholder="Password" />
+              </nz-input-group>
+            </nz-form-control>
+          </nz-form-item>
+        </form>
+      </div>
+      <div nz-col nzSpan="24">
+        <div nz-col class="login-main" style="margin-top: 1rem;"><button class="btn" nz-button >LOGIN</button></div>
+        <div nz-col class="register-login" style="margin-top: 1rem;"><button nz-button nzType="primary"
+            (click)="productMain()">Product</button></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

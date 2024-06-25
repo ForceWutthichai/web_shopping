@@ -1,0 +1,154 @@
+body, ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.card-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px; /* ช่องว่างระหว่างการ์ด */
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 300px;
+  text-align: center;
+  margin: 20px 0; /* เพิ่มช่องว่างบนและล่างระหว่างการ์ด */
+}
+
+.card-image {
+  width: 100%;
+  height: auto;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 1.5em;
+  margin: 0;
+  color: #333;
+}
+
+.card-description {
+  font-size: 1em;
+  margin: 10px 0;
+  color: #666;
+}
+
+.card-price {
+  font-size: 1.2em;
+  margin: 10px 0;
+  color: #e67e22;
+}
+
+.card-stock {
+  font-size: 1em;
+  margin: 10px 0;
+  color: #27ae60;
+}
+
+.card-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+  gap: 10px; /* ช่องว่างระหว่างปุ่ม */
+}
+
+.card-buttons button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.view-button {
+  background-color: #3498db;
+  color: white;
+}
+
+.buy-button {
+  background-color: #31CC24;
+  color: white;
+}
+
+.delete-button {
+  background-color: #ff4d4f;
+  color: white;
+}
+
+.custom-yellow-orange-button {
+  background-color: #FFA500; /* สีเหลืองส้ม */
+  border-color: #FFA500;
+  color: white;
+}
+
+.view-button:hover {
+  background-color: #2980b9;
+}
+
+.buy-button:hover {
+  background-color: #28a745;
+}
+
+.delete-button:hover {
+  background-color: #ff3333;
+}
+
+.custom-yellow-orange-button:hover {
+  background-color: #FF8C00; /* สีเหลืองส้มเข้มขึ้นเมื่อ hover */
+  border-color: #FF8C00;
+}
+
+.custom-yellow-orange-button:focus {
+  background-color: #FF8C00; /* สีเหลืองส้มเข้มขึ้นเมื่อ focus */
+  border-color: #FF8C00;
+}
+
+/* Topbar styles */
+.topbar {
+  background-color: #301f84;
+  color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topbar .logo {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.topbar nav {
+  margin-left: auto;
+}
+
+/* Menu styles */
+ul.nz-menu {
+  display: flex;
+}
+
+ul.nz-menu li {
+  margin: 0 15px;
+}
+
+ul.nz-menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1em;
+  transition: color 0.3s ease;
+}
+
+ul.nz-menu li a:hover {
+  color: #ff6347; /* Change this color to whatever you like */
+}
