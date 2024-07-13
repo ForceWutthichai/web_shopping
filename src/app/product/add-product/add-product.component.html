@@ -1,6 +1,6 @@
 <div class="container">
   <h1>Add New Product</h1>
-  <form id="add-product-form">
+  <form id="add-product-form" (ngSubmit)="addProduct()">
       <div class="form-group">
           <label for="product-name">Product Name</label>
           <input [(ngModel)]="productName" type="text" id="product-name" name="productName" required>
@@ -21,6 +21,6 @@
           <label for="product-image">URL Product Image</label>
           <input [(ngModel)]="productImage" type="text" id="product-image" name="productImage" required>
       </div>
-      <button type="submit" class="submit-button" (click)="addProduct()">Add Product</button>
+      <button type="submit" class="submit-button">Add Product</button>
   </form>
 </div>
