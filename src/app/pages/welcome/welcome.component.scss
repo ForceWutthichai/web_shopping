@@ -1,3 +1,10 @@
+#heading {
+  text-align: center;
+  margin: 2rem;
+  color: rgb(255, 255, 255);
+  font-size: 1.2em;
+}
+
 .background {
   display: flex;
   justify-content: center;
@@ -22,51 +29,13 @@
 
 .centered-box {
   width: 80%;
-  max-width: 1200px;
+  max-width: 800px;
   padding: 20px;
-  background-color: #CDDFF9;
+  background-color: #171717;
   border-radius: 10px;
   text-align: center;
 
-  --s: 84px;
-  --c1: #f2f2f2;
-  --c2: #cdcbcc;
-  --c3: #999999;
 
-  --_g: 0 120deg, #0000 0;
-  background: conic-gradient(
-      from 0deg at calc(500% / 6) calc(100% / 3),
-      var(--c3) var(--_g)
-    ),
-    conic-gradient(
-      from -120deg at calc(100% / 6) calc(100% / 3),
-      var(--c2) var(--_g)
-    ),
-    conic-gradient(
-      from 120deg at calc(100% / 3) calc(500% / 6),
-      var(--c1) var(--_g)
-    ),
-    conic-gradient(
-      from 120deg at calc(200% / 3) calc(500% / 6),
-      var(--c1) var(--_g)
-    ),
-    conic-gradient(
-      from -180deg at calc(100% / 3) 50%,
-      var(--c2) 60deg,
-      var(--c1) var(--_g)
-    ),
-    conic-gradient(
-      from 60deg at calc(200% / 3) 50%,
-      var(--c1) 60deg,
-      var(--c3) var(--_g)
-    ),
-    conic-gradient(
-      from -60deg at 50% calc(100% / 3),
-      var(--c1) 120deg,
-      var(--c2) 0 240deg,
-      var(--c3) 0
-    );
-  background-size: calc(var(--s) * 1.732) var(--s);
 
 }
 
@@ -81,7 +50,7 @@
   width: 6.5em;
   height: 2.3em;
   margin: 0.5em;
-  background: black;
+  background: #50C878;
   color: white;
   border: none;
   border-radius: 0.625em;
