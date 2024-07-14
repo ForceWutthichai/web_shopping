@@ -35,4 +35,7 @@ export class ProductComponent implements OnInit {
     this._productService.deleteProduct(productId);
     this.products = this._productService.getProducts();
   }
+  onEdit(productId: number) {
+    this.route.navigate(['/editProduct', productId]);
+  }
 }

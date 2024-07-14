@@ -3,6 +3,7 @@ import { WelcomeComponent } from './pages/welcome/welcome.component';
 import { RegisterComponent } from './register/register.component';
 import { ProductComponent } from './product/product.component';
 import { AddProductComponent } from './product/add-product/add-product.component';
+import { EditProductComponent } from './product/edit-product/edit-product.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/welcome', pathMatch: 'full' },
@@ -19,6 +20,8 @@ export const routes: Routes = [
   },
   {
     path : 'addProduct',component :AddProductComponent
-  }
-
+  },
+  {
+    path: 'editProduct/:id', component: EditProductComponent
+  },
 ];

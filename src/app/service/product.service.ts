@@ -30,7 +30,9 @@ export class ProductService {
   }
 
   private saveProducts() {
-    localStorage.setItem('products', JSON.stringify(this.products));
+    if (this.isLocalStorageAvailable()) {
+      localStorage.setItem('products', JSON.stringify(this.products));
+    }
   }
 
   private isLocalStorageAvailable(): boolean {
@@ -48,6 +50,9 @@ export class ProductService {
     return this.products;
   }
 
+  getProductById(id: number): Product | undefined {
+    return this.products.find(product => product.id === id);
+  }
   addProduct(product: Product) {
     this.products.push(product);
     console.log(localStorage.getItem('products'));
@@ -57,5 +62,12 @@ export class ProductService {
   deleteProduct(productId: number) {
     this.products = this.products.filter(product => product.id !== productId);
     this.saveProducts();
+  }
+  updateProduct(updatedProduct: Product) {
+    const index = this.products.findIndex(product => product.id === updatedProduct.id);
+    if (index !== -1) {
+      this.products[index] = updatedProduct;
+      this.saveProducts();
+    }
   }
 }
